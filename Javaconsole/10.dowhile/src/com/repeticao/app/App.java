@@ -27,6 +27,7 @@ public class App {
             System.out.println("Informe a altura: ");
             altura = leia.nextDouble();
 
+            
             //verifica a idade e altura
             if (idade >= 12 && altura >= 1.15) {
                 System.out.println(nome + " está autorizado. ");
