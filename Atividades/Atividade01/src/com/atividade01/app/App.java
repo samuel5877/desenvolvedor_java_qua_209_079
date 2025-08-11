@@ -4,35 +4,54 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+      //instância do Scanner
         Scanner leia = new Scanner(System.in);
 
-        String nome;
-        int peso, opcao;
-        double altura;
+        //declaração de variáveis
+        String nome,opcao, diagnostico;
+        double peso, altura, imc;
+        int saida = 0;
 
-        System.out.println("1 - Registrar nova entrada. ");
-          System.out.println("2 - Sair do programa. ");
-          System.out.println("1 - Informe opção desejada: ");
-          opcao = leia.nextInt();
+        //loop
+        do{
+          System.out.println("1 - Calcular o IMC");
+          System.out.println("2 - Sair do programa");
+          System.out.println("Escolha a opção:");
+          opcao = leia.nextLine();
 
-          if (opcao == 1) {
-            leia.nextLine();
-            System.out.println("Informe o nome: ");
-            nome = leia.nextLine();
-            System.out.println("Informe o peso: ");
-            peso = leia.nextInt();
-            System.out.println("Informe a altura: ");
-            altura = leia.nextDouble();
+          switch (opcao) {
+            case "1":
+                System.out.println("Informe seu nome:");
+                nome = leia.nextLine();
+                System.out.println("Informe seu peso em kg:");
+                peso = leia.nextDouble();
+                System.out.println("Informe sua altura em metros:");
+                altura = leia.nextDouble();
+
+                imc = peso / (altura*altura);
+
+                System.out.println("O IMC de " + nome + " é " + String.format("%.2f", imc) + ".");
+
+                //ternário
+                diagnostico = (imc < 18.5) ? nome + "está abixo do peso."
+                : (imc < 25) ? nome + " está no peso ideal."
+                : (imc < 30) ? nome + " está acima do peso."
+                : (imc < 35) ? nome + " está obeso."
+                : (imc < 40) ? nome + " está com obesidade nivel II."
+                : nome + " está com obesidade mórbida.";
+                System.out.println(diagnostico);
+                break;
+            case "2":
+                saida = Integer.parseInt(opcao);
+                System.out.println("Programa encerrado.");
+                break;
+            default:
+                System.out.println("Opção inválida.");
           }
-
-           if () {
-                System.out.println(nome + " está autorizado. ");
-            }
-
-
-
+        }while(saida != 2);
+        
+        //fecha objeto Scanner
         leia.close();
-    
 }
 
 }
