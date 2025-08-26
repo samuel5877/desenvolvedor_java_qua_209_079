@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário CSS</title>
+
+    <!-- linkando arquivo css-->
+     <link rel="stylesheet" href="css/estilos.css" type="text/css" media="all" />
+</head>
+<body>
+    <h1>Formulário com CSS</h1>
+    <hr />
+    <form method="">
+        <input type="text" placeholder="nome" class="nome" />
+        <input type="text" placeholder="sobrenome" class="sobrenome "/>
+        <input type="tel" placeholder="telefone: (00)00000-0000" class="telefone" />
+        <input type="email" placeholder="email: usuario@servidor.com" class="email" />
+        <select class="genero">
+            <option>Informe o gênero...</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Não desejo informar</option>
+        </select>
+        <input type="text" placeholder="Cep: 00.000-000" class="cep" />
+        <input type="text" placeholder="Cidade" class="cidade" />
+        <input type="text" placeholder="Endereço" class="endereco" />
+        <label for="escolaridade">Escolaridade</label><br />
+        <select>
+            <option name="escolaridade">Escolha uma opção...</option>
+            <option name="escolaridade">Nível fundamental</option>
+            <option name="escolaridade">Nível médio</option>
+            <option name="escolaridade">Nível superior</option>
+            <option name="escolaridade">Pós-graduação</option>
+            <option name="escolaridade">Mestrado</option>
+            <option name="escolaridade">Doutorado</option>
+        </select>
+
+        <input type="text" placeholder="Informe a profissão" /><br />
+        
+        <label>Cursos ja feitos:</label><br />
+        <input type="checkbox" name="cursos"><span>Medicina</span><br />
+        <input type="checkbox" name="cursos"><span>Direito</span><br />
+        <input type="checkbox" name="cursos"><span>Engenharia Civil</span><br />
+        <input type="checkbox" name="cursos"><span>Psicologia</span><br />
+        <input type="checkbox" name="cursos"><span>Administração</span><br />
+        <input type="checkbox" name="cursos"><span>Arquitetura e Urbanismo</span><br />
+        <input type="checkbox" name="cursos"><span>Ciência da Computação</span><br />
+        <input type="checkbox" name="cursos"><span>Enfermagem</span><br />
+        <input type="checkbox" name="cursos"><span>Design Gráfico</span><br />
+        <input type="checkbox" name="cursos"><span></span>Educação-Física<br />
+
+        <button type="submit">Cadastrar</button>
+        
+    </form>
+</body>
+</html>
